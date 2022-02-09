@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#contents{
+    background: url(../images/bg.jpg) no-repeat;/*no-repeat은 배경이미지의 반복 방법 지정하는 속성중 한번만 표시할 때*/
+    background-size: cover;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h1{
+    color: #fff;
+    font-size: 120px;
+    text-shadow: 2px 3px 0 #000;
+    position: absolute;/*absolute는 relative인 부모요소를 기준으로. 따라서 기준요소에는 relative*/
+    right: 100px;
+    bottom: 100px;
+}
