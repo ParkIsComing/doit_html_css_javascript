@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>고급선택자</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        section{
+            width: 600px;
+            margin: 20px auto;
+        }
+        p{
+            width: 500px;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid black;
+            line-height: 2;
+
+        }
+
+        h1 + p {/*인접형제선택자*/
+            /*h1 요소의 형제 요소(부모가 같은 요소) 중 첫번째 요소 p에만 적용됨*/
+            background-color:black;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>선수 올림픽</h1>
+        <p>둘 중 무조건 한 사람이 되어야 한다면 당신의 선택은?</p>
+        <p>러시아에서 중국으로~그남자</p>
+        <p>중국으로 귀화해 개명까지~그남자</p>
+    </section>
+</body>
+</html>
