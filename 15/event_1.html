@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/color.css">
+</head>
+<body>
+    <!--이벤트를 처리하는 기본적인 방법은 이벤트가 발생한 html 태그에 이벤트 처리기를 직접 연결하는 것-->
+    <ul>
+        <li><a href="#" onclick="changeBg('green')">Green</a></li>
+        <li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+        <li><a href="#" onclick="changeBg('purple')">Purple</a></li>
+    </ul>
+    <div id="result"></div>
+    <script>
+        function changeBg(color) {
+            var result = document.querySelector('#result');
+            result.style.backgroundColor = color;
+        }
+    </script>
+    
+</body>

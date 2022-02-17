@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 이벤트</title>
+    <link rel="stylesheet" href="css/event.css">
+</head>
+<body>
+    <div id="item">
+        <img src="images/me.jpg" alt="나다">
+        <button class="over" id="open" onclick="showDetail()">상세 설명 보기</button>
+        <div id="desc" class="detail">
+            <h4>유사이과 && 유사문과 개발자</h4>
+            <p>로데오 근처 카페에서 주로 목격됨</p>
+            <button id="close" onclick="hideDetail()">상세 설명 닫기</button>
+        </div>
+    </div>
+    <script>
+        function showDetail() {
+            document.querySelector('#desc').style.display = "block";//상세 설명 부분desc는 화면에 표시하고 
+            document.querySelector('#open').style.display = "none";//상세 설명 보기 버튼 open은 화면에서 감춤
+        }
+        function hideDetail() {
+            document.querySelector('#desc').style.display = "none";//상세 설명 부분 desc를 화면에서 감추고
+            document.querySelector('#open').style.display = "block";//상세 설명 보기 버튼 open을 화면에 표시함
+        }
+    </script>
+</body>
+</html>

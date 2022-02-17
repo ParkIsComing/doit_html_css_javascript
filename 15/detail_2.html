@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 이벤트</title>
+    <link rel="stylesheet" href="css/event.css">
+</head>
+<body>
+    <div id="item">
+        <img src="images/me.jpg" alt="나야">
+        <button class="over" id="open">상세 설명 보기</button>
+        <div id="desc" class="detail">
+            <h4>초보 개발자</h4>
+            <p>엉망진창으로 만들고 있지만 하다보면 나아지겠지!</p>
+            <button id="close">그만 볼래</button>
+        </div>
+    </div>
+    <script>
+        document.querySelector(".over").onclick=function() {
+            document.querySelector(".detail").style.display = "block";
+            document.querySelector(".over").style.display="none";
+            
+        }
+        document.querySelector("#close").onclick=function() {
+            document.querySelector(".detail").style.display = "none";
+            document.querySelector(".over").style.display="block";
+            
+        }
+    </script>
+</body>
+</html>

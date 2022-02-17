@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <style>
+        body {
+            padding-top:  20px;
+            text-align: center;
+        }
+
+        .accent {/*이름 부분에 색깔 두꼐 다르게*/
+            font-weight: bold;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const userName = prompt("이름을 입력하세요");
+        (function() {
+            document.write("안녕하세요? <span class='accent'>" + userName + "</span>님!")
+        }());/*즉시 실행 함수.  함수를 식형태로 선언하므로 마지막에 세미콜론 붙임*/
+
+        // const hi = function() {
+        //     return "안녕";
+        // }
+
+        const hi = () => {return "안녕"};
+        // const hi = () => "안녕"   
+        //위처럼 중괄호 생략해서 작성해도 됨(return도 생략)
+
+        // let hi = function(user) {
+        //     document.write(user + "님 안녕하세요");
+        // }
+
+        let hi= user => {document.write(user + "님 안녕하세요")} /*매개변수가 하나인 경우 매개변수 괄호는 생략가능*/
+        hi(userName); 
+
+        // let sum = function(a, b) {
+        //     return a + b;
+        // }
+
+        let sum = (a, b) => a + b;
+        
+
+
+    </script>
+    
+</body>
+</html>
