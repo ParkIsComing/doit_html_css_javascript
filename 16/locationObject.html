@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>locaton Object</title>
+</head>
+<body>
+    <div id="container">
+        <h2>location 객체</h2>
+        <div id="dispaly">
+            <script>
+                document.write("<p><b>location.href : </b>" + location.href + "</p>");//href는 전체 url 나타내는 프로퍼티
+                document.write("<p><b>location.host : </b>" + location.host + "</p>");//host는 url의 호스트 이름과 포트 번호를 담고 있음
+                document.write("<p><b>location.protocol : </b>" + location.protocol + "</p>");//protocol은 url의 프로토콜을 저장
+            </script>
+        </div>
+        <button onclick="location.replace('http://www.easypub.com')">홈페이지로 이동</button>
+    </div>
+</body>
+</html>

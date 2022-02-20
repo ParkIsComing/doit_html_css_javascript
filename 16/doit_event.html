@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 공지</title>
+</head>
+<body>
+    <div id="container">
+        <h1>이벤트 공지</h1>
+        <img src="images/me.jpg" alt="나얌">
+        <p><a href="doit_main.html" onclick="loadURL(this.href);return false">자세히 보기</a></p> <!--this는 click이벤트가 발생한 대상(a 객체)를 가리킴-->
+    </div>
+
+    <script>
+        function loadURL(url){
+            window.opener.location = url;//부모 창의 loaction에 url을 넘김
+            window.close();//현재 창 닫기 => 팝업창 닫히고 상세정보 창이 나타나게 됨
+        }
+    </script>
+    
+</body>
+</html>

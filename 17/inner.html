@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText, innerHTML 프로퍼티</title>
+</head>
+<body>
+    <button onclick="inntext()">innerText로 표시하기</button>
+    <button onclick="innhtml()">innerHTML로 표시하기</button>
+    <h1>현재 시각: </h1>
+    <div id="current"></div>
+
+    <script>
+        var now = new Date();
+        
+        function inntext() {
+            document.getElementById("current").innerText = now;//innerText 프로퍼티는 텍스트 내용 표시
+        }
+        function innhtml() {
+            document.getElementById("current").innerHTML = "<em>" + now + "</em>";//innerHTML 프로퍼티는 HTML태그까지 반영하여 표시
+        }
+    </script>
+</body>
+</html>
