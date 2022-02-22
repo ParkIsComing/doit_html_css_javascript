@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM event 객체</title>
+</head>
+<body>
+    <div id="container">
+        <img src="images/cup-2.png" id="cup">
+    </div>
+    
+    <script>
+        let cup = document.querySelector("#cup");
+        cup.onclick = changePic;//함수 이름 뒤에 괄호x
+        function changePic() {
+            cup.src = "images/cup-1.png"//cup 요소의 경로를 다른 이미지 경로로 바꿈
+        }
+    </script>
+</body>
+</html>

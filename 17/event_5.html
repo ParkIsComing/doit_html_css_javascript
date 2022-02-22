@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM event 객체</title>
+</head>
+<body>
+    <div id="container">
+        <img src="images/easys-1.jpg" id="cover">
+    </div>
+
+    <script>
+        var cover = document.getElementById("cover");
+        cover.addEventListener("mouseover", changePic, false);// 요소.addEventListener(이벤트, 함수, 캡처 여부)
+        cover.addEventListener("mouseout", originPic, false);//이미지 위에 마우스 포인터를 올리면 이미지가 바뀌고 이미지 밖에 마우스 포인터가 있으면 다시 원래 이미지로
+
+        function changePic() {
+            cover.src = "images/easys-2.jpg";
+        }
+        function originPic() {
+            cover.src = "images/easys-1.jpg"
+        }
+    </script>
+</body>
+</html>

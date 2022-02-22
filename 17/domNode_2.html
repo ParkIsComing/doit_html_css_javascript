@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="container">
+        <h1>DOM tree</h1>
+        <a href="#" onclick="addP(); this.onclick='';">더보기</a> <!--클릭하면 addp() 함수가 한번만 실행. this.onclick=''가 없으면 링크 클릭할 때마다 p요소가 계속 추가됨-->
+        <div id="info"></div>
+    </div>
+
+    <script>
+        function addP() {
+            var newP = document.createElement("p")
+            var txtNode = document.createTextNode("DOM은 Document Object Model의 줄임말."); //p 요소에 들어갈 내용을 담은 텍스트 노드-
+           //appendChild()는 텍스트 노드나 속성 노드를 만들고 요소 노드에 연결할 때 사용
+            newP.appendChild(txtNode);//요소노드 newP에 텍스트 노드 txtNode를 자식요소로 연결
+            document.getElementById("info").appendChild(newP);//아이디가 info인 div 요소 노드에 newP를 다시 연결
+        }
+    </script>
+</body>
+</html>

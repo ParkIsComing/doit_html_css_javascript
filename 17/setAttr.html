@@ -11,7 +11,7 @@
     <div id="container">
         <h1 id="heading">에디오피아 게뎁</h1>
         <div id="prod-pic">
-            <img src="images/coffee-pink.jpg" alt="에디오피아 게뎁" id="cup" width="200" height="200" onclick="displaySrc()">
+            <img src="images/coffee-pink.jpg" alt="에디오피아 게뎁" id="cup" width="200" height="200">
             <div id="small-pic">
                 <img src="images/coffee-pink.jpg" class="small">
                 <img src="images/coffee-blue.jpg" class="small">
@@ -30,6 +30,7 @@
             </ul>
             <a href="#" id="view">상세 설명 보기</a>
         </div>
+
         <div id="detail">
             <hr>
             <h2>상품 상세 정보</h2>
@@ -49,9 +50,16 @@
     </div>
 
     <script>
-        function displaySrc() {
-            var cup = document.querySelector("#cup");
-            alert("이미지 소스 :" + cup.getAttribute("src"));
+        var cup = document.querySelector("#cup");
+        var smallPics = document.querySelectorAll(".small");
+
+        for(let i = 0; i < smallPics.length; i++) {
+            smallPics[i].addEventListener("click", changePic);
+        }
+
+        function changePic() {
+            var newPic = this.src;
+            cup.setAttribute("src", newPic);
         }
     </script>
     
