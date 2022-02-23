@@ -6,18 +6,23 @@
     margin:20px auto;
     padding:20px;
 }
+
+h1 {
+    color: aquamarine;
+}
 input[type="text"] {
     width:370px;
     float:left;
     height:30px;
     padding-left:30px;
+    border: 1px solid aquamarine;
 }
 button {
     width:90px;
     height:30px;
     float:right;
-    background:#222;
-    color:#fff;
+    background:aquamarine;
+    color:black;
     border:none;
 }
 hr { clear:both; display:none; }
